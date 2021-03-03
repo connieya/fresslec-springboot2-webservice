@@ -14,6 +14,7 @@ var main = {
         });
     },
     save : function(){
+        alert("버튼 클릭")
         var data = {
             title : $('#title').val(),
             author : $('#author').val(),
@@ -32,7 +33,7 @@ var main = {
         }).fail(function (error){
             alert(JSON.stringify(error));
         });
-    }
+    },
 
     update : function(){
         var data = {
@@ -54,8 +55,7 @@ var main = {
         }).fail(function(error){
             alert(JSON.stringify(error))
         });
-    }
-
+    },
     delete : function(){
         var id = $('#id').val();
 
