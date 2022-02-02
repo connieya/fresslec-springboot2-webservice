@@ -9,10 +9,10 @@ import javax.persistence.*;
 
 @Getter
 @NoArgsConstructor
-@Entity
+@Entity // JPA 의 어노테이션
 public class Posts extends BaseTimeEntity {
 
-    @Id
+    @Id // 해당 테이블의 PK 필드
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
@@ -24,7 +24,7 @@ public class Posts extends BaseTimeEntity {
 
     private String author;
 
-    @Builder
+    @Builder // 빌더 패턴
     public Posts(String title, String content, String author){
         this.title = title;
         this.content = content;

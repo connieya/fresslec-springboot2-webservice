@@ -14,8 +14,8 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 @ExtendWith(
         SpringExtension.class
-)// 테스트를 진행할 때 JUnit에 내장된 실행자 외에 다른 실행자를 실행시킴
-// 여기서는 SpringExtensipn 이라는 스프링 실행자를 사용함
+)// 테스트를 진행할 때 JUnit 에 내장된 실행자 외에 다른 실행자를 실행시킴
+// 여기서는 SpringExtension 이라는 스프링 실행자를 사용함
 // 즉, 스프링 부트 테스트와 JUnit 사이에 연결자 역할을 한다.
 @SpringBootTest
 public class PostsRepositoryTest {
@@ -51,7 +51,7 @@ public class PostsRepositoryTest {
     }
 
     @Test
-    public void BaseTimeEntitiy_등록(){
+    public void BaseTimeEntity_등록(){
         //given
         LocalDateTime now = LocalDateTime.of(2021,2,28,0,0,0);
         postsRepository.save(Posts.builder()
