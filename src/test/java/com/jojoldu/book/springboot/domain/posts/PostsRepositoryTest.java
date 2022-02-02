@@ -1,8 +1,5 @@
 package com.jojoldu.book.springboot.domain.posts;
 
-import com.jojoldu.book.springboot.domain.posts.Posts;
-import com.jojoldu.book.springboot.domain.posts.PostsRepository;
-import javafx.geometry.Pos;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;

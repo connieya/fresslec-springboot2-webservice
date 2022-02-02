@@ -8,5 +8,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class Application { // 이 프로젝트의 메인 클래스
     public static void main(String[] args) {
         SpringApplication.run(Application.class, args);
+        // 내장 WAS 를 실행한다.
     }
 }

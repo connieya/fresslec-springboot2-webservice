@@ -35,8 +35,8 @@ public class HelloControllerTest { // helloController의 GetMapping이 잘 작�
     public void hello가_리턴된다() throws Exception{
         String hello = "hello";
 
-        mvc.perform(get("/hello"))
-                .andExpect(status().isOk())
+        mvc.perform(get("/hello")) // MockMvc 를 통해 /hello 주소로 HTTP GET 요청을 한다. 체이닝으로 여러 검증 기능을 이어서 선언할 수 있다.
+                .andExpect(status().isOk()) // mvc.perform의 결과를 검증한다. 여기선 OK 즉, 200 인지 아닌지를 검증한다.
                 .andExpect(content().string(hello));
 
     }
