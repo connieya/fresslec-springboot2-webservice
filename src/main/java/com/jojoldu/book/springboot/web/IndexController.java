@@ -21,8 +21,9 @@ public class IndexController {
     private final PostsService postsService;
     private final HttpSession httpSession;
 
-    @GetMapping("/")
+    @GetMapping("/") // 서버 템플릿 엔진에서 사용할 수 있는 객체를 저장할 수 있다.
     public String index(Model model, @LoginUser SessionUser user){
+        // postsService.findAllDesc() 로 가져온 결과를 posts 로 index.mustache 에 전달한다.
         model.addAttribute("posts", postsService.findAllDesc());
 
 //        SessionUser user = (SessionUser) httpSession.getAttribute("user");
@@ -41,7 +42,7 @@ public class IndexController {
     }
 
 
-    @GetMapping("/posts/update/{id}")
+    @GetMapping("/posts/update/{id}") //Model 은  서버 템플릿 엔진에서 사용할 수 있는 객체를 저장할 수 있다.
     public String postsUpdate(@PathVariable Long id , Model model){
 
         PostsResponseDto dto = postsService.findById(id);

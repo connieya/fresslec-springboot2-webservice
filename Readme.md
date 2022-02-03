@@ -43,6 +43,10 @@ Spring Data MongoDB 로 의존성만 교체하면 된다.
 save() , findAll , findOne() 등을 인터페이스로 갖고 있다.  그러다 보니 저장소가 교체 되어도 기본적인 기능은
 변경할 것이 없다.
 
+# h2
+
+jdbc:h2:mem:testdb
+
 
 # Spring 웹 계층
 
@@ -73,6 +77,8 @@ save() , findAll , findOne() 등을 인터페이스로 갖고 있다.  그러다
   - VO 처럼 값 객체들도 이 영역에 해당하기 때문
 
 
-# h2
+# 스프링 시큐리티
 
-jdbc:h2:mem:testdb
+스프링 시큐리티는 막강한 인증<sup>Authentication</sup>  과 인가 <sup>Authorization</sup>(혹은 권한 부여)
+기능을 가진 프레임워크 이다. 스프링 기반의 애플리케이션에서는 보안을 위한 표준이라고 보면 된다. 
+인터셉터, 필터 기반의 보안 기능을 구현하는 것보다 스프링 시큐리티를 통해 구현하는 것을 적극적으로 권장하고 있다.

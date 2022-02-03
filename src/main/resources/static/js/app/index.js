@@ -31,7 +31,8 @@ var main = {
             alert('글이 등록되었습니다.');
             window.location.href = '/';
         }).fail(function (error){
-            alert(JSON.stringify(error));
+            console.log("에러",error);
+            // alert(JSON.stringify(error));
         });
     },
 
@@ -44,7 +45,7 @@ var main = {
         var id = $('#id').val();
 
         $.ajax({
-            type: 'PUT',
+            type: 'PUT', // postApiController 에서 PutMapping 으로 선언했기 때문에 put 으로 선언
             url : '/api/v1/posts/'+id,
             dataType : 'json',
             contentType : 'application/json; charset=utf-8',
@@ -58,7 +59,6 @@ var main = {
     },
     delete : function(){
         var id = $('#id').val();
-
         $.ajax({
             type: 'DELETE',
             url : '/api/v1/posts/'+id,
@@ -68,6 +68,7 @@ var main = {
             alert('글이 삭제되었습니다.')
             window.location.href = '/';
         }).fail(function(error){
+            console.log(JSON.stringify(error));
             alert(JSON.stringify(error));
         });
     }
